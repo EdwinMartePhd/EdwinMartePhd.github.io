@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dr. Edwin Marte Zorrilla Homepage - Department of Engineering Education at University of Florida">
+  <meta name="keywords" content="Edwin Marte Zorrilla, Edwin Marte, Engineering Education, Educational Technology, Multimodal Data, Learning Analytics, Affective Computing, University of Florida, UF">
+  <title>Dr. Edwin Marte Zorrilla | University of Florida</title>
+
+  <link rel="shortcut icon" href="img/misc/ufl.png">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- UF Brand & Custom Styles -->
+  <style>
+    :root {
+      --uf-blue: #0021A5;
+      --uf-orange: #FA4616;
+    }
+    .bg-uf-blue { background-color: var(--uf-blue); }
+    .bg-uf-orange { background-color: var(--uf-orange); }
+    .text-uf-blue { color: var(--uf-blue); }
+    .text-uf-orange { color: var(--uf-orange); }
+    .border-uf-blue { border-color: var(--uf-blue); }
+    .border-uf-orange { border-color: var(--uf-orange); }
+    .hover\:bg-uf-orange:hover { background-color: #E63F14; }
+    .focus\:ring-uf-blue:focus { --tw-ring-color: var(--uf-blue); }
+
+    /* Modern header gradient */
+    .header-gradient {
+      background: linear-gradient(135deg, #0021A5 0%, #001580 50%, #0021A5 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header-gradient::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 200%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+      animation: shimmer 3s infinite;
+    }
+
+    @keyframes shimmer {
+      0% { left: -100%; }
+      100% { left: 100%; }
+    }
+
+    .header-icon {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    /* Accessibility Focus Rules */
+    *:focus-visible {
+      outline: 3px solid #03cc85 !important;
+      outline-offset: 2px !important;
+    }
+  </style>
+
+  <!-- External JavaScript Files -->
+  <script type="text/javascript" src="js/jquery-3.5.0.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+  <script>
+    if (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
+      var meta = document.createElement('meta');
+      meta.httpEquiv = 'Content-Security-Policy';
+      meta.content = 'upgrade-insecure-requests';
+      document.head.appendChild(meta);
+    }
+  </script>
+</head>
+
+<body class="bg-gray-50 text-gray-800 min-h-screen flex flex-col font-sans">
+
+  <!-- Skip to Main Content (Accessibility) -->
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:px-4 focus:py-2 focus:bg-uf-orange focus:text-white focus:rounded-md">
+    Skip to main content
+  </a>
+
+  <!-- Header -->
+  <header class="header-gradient text-white shadow-2xl sticky top-0 z-40">
+    <div class="container mx-auto px-4 py-4">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <!-- Profile Identity -->
+        <div class="flex items-center gap-4">
+          <div class="header-icon rounded-xl p-2 flex items-center justify-center shrink-0">
+            <img src="img/personal/edwin-marte.jpg" alt="Portrait of Dr. Edwin Marte Zorrilla" class="w-12 h-12 rounded-lg object-cover">
+          </div>
+          <div>
+            <h1 class="text-xl md:text-2xl font-extrabold tracking-tight">
+              Dr. Edwin Marte Zorrilla
+            </h1>
+            <p class="text-xs md:text-sm text-blue-100 font-light">
+              Instructional Assistant Professor &bull; Graduate Coordinator &bull; Department of Engineering Education
+            </p>
+            <div class="h-1 w-16 bg-uf-orange rounded-full mt-1"></div>
+          </div>
+        </div>
+
+        <!-- External Quick Links -->
+        <div class="flex items-center gap-3">
+          <a href="CV_Marte_Zorrilla.pdf" target="_blank" class="px-4 py-2 bg-uf-orange hover:bg-orange-600 text-white text-sm font-medium rounded-md shadow transition-colors flex items-center gap-2">
+            <i class="fa fa-download" aria-hidden="true"></i> Download CV
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Accent Line -->
+    <div class="h-1 bg-gradient-to-r from-uf-orange via-yellow-400 to-uf-orange"></div>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav class="bg-white border-b shadow-sm sticky top-[81px] z-30" aria-label="Main Navigation">
+    <div class="container mx-auto px-4 overflow-x-auto">
+      <ul class="flex items-center gap-1 md:gap-2 text-sm font-medium py-2 whitespace-nowrap">
+        <li><a href="#biography" class="px-3 py-2 text-gray-700 hover:text-uf-blue hover:bg-gray-100 rounded-md transition-colors inline-flex items-center gap-1.5"><i class="fa fa-user text-uf-blue"></i> About Me</a></li>
+        <li><a href="#research" class="px-3 py-2 text-gray-700 hover:text-uf-blue hover:bg-gray-100 rounded-md transition-colors inline-flex items-center gap-1.5"><i class="fa fa-flask text-uf-blue"></i> Research</a></li>
+        <li><a href="#publications" class="px-3 py-2 text-gray-700 hover:text-uf-blue hover:bg-gray-100 rounded-md transition-colors inline-flex items-center gap-1.5"><i class="fa fa-file-text text-uf-blue"></i> Publications</a></li>
+        <li><a href="#teaching" class="px-3 py-2 text-gray-700 hover:text-uf-blue hover:bg-gray-100 rounded-md transition-colors inline-flex items-center gap-1.5"><i class="fa fa-graduation-cap text-uf-blue"></i> Teaching</a></li>
+        <li><a href="#news" class="px-3 py-2 text-gray-700 hover:text-uf-blue hover:bg-gray-100 rounded-md transition-colors inline-flex items-center gap-1.5"><i class="fa fa-newspaper-o text-uf-blue"></i> News</a></li>
+        <li><a href="#contact" class="px-3 py-2 text-gray-700 hover:text-uf-blue hover:bg-gray-100 rounded-md transition-colors inline-flex items-center gap-1.5"><i class="fa fa-envelope text-uf-blue"></i> Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content Container -->
+  <main id="main" class="container mx-auto px-4 py-8 flex-1 max-w-7xl">
+
+    <!-- About Me Section -->
+    <section id="biography" class="bg-white rounded-xl shadow-md p-6 mb-8 border border-gray-100">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        
+        <!-- Sidebar/Thumbnails Area -->
+        <div class="lg:col-span-4 flex flex-col gap-6">
+          <div class="overflow-hidden rounded-xl shadow-md border border-gray-200">
+            <img src="img/personal/edwin-marte.jpg" alt="Portrait of Dr. Edwin Marte Zorrilla" class="w-full object-cover">
+          </div>
+
+          <!-- Academic Affiliation Card -->
+          <div class="p-4 bg-blue-50/50 rounded-xl border border-blue-100 text-center">
+            <img src="img/misc/ufl.png" alt="University of Florida Logo" class="mx-auto max-h-12 object-contain mb-2">
+            <p class="text-xs text-gray-700 font-semibold">Department of Engineering Education</p>
+            <p class="text-xs text-gray-600">Herbert Wertheim College of Engineering</p>
+            <p class="text-xs text-gray-500 mt-1">University of Florida &bull; Gainesville, FL</p>
+          </div>
+
+          <!-- Quick Honors Callout -->
+          <div class="bg-gradient-to-br from-amber-50 to-orange-50 p-5 rounded-xl border border-orange-200">
+            <h3 class="text-base font-bold text-uf-orange mb-2 flex items-center gap-2">
+              <i class="fa fa-trophy"></i> Recognition & Roles
+            </h3>
+            <ul class="text-xs space-y-2 text-gray-700">
+              <li><strong>2026 UF Global Fellow:</strong> Internationalizing engineering curricula & research partnerships.</li>
+              <li><strong>2024 IEEE ASEE FIE New Faculty Fellow:</strong> Frontiers in Education Awardee.</li>
+              <li><strong>Graduate Coordinator:</strong> Department of Engineering Education.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bio Narrative -->
+        <div class="lg:col-span-8 flex flex-col justify-between">
+          <div>
+            <h2 class="text-2xl font-bold text-uf-blue mb-4 border-b pb-2 flex items-center justify-between">
+              Biography
+              <span class="text-xs font-normal text-gray-500">Herbert Wertheim College of Engineering</span>
+            </h2>
+            <div class="prose prose-slate max-w-none text-sm leading-relaxed space-y-4">
+              <p>
+                <strong>Dr. Edwin Marte Zorrilla</strong> is an Instructional Assistant Professor and Graduate Coordinator in the Department of Engineering Education at the University of Florida. He holds a Ph.D. in Engineering Education and an M.S. in Electrical and Computer Engineering from the University of Florida, bringing over 15 years of higher education teaching experience across both the United States and the Dominican Republic.
+              </p>
+              <p>
+                Dr. Marte Zorrilla's research sits at the intersection of <strong>educational technology, physiological and emotional learning metrics, artificial intelligence in education, and culturally responsive pedagogy</strong>. His work investigates how multimodal sensing (such as heart rate variability and electrodermal activity) and natural language processing can be leveraged to understand student stress, affective fluctuations, and cognitive load during demanding engineering evaluations.
+              </p>
+              <p>
+                As an educator, Dr. Marte Zorrilla is dedicated to creating experiential, inclusive learning environments. His teaching repertoire includes foundational programming in MATLAB, embedded systems, microcontrollers, CAD, digital design, and engineering design frameworks. He actively mentors robotics teams and leads efforts in integrating emerging AI technologies—such as Intelligent Tutoring Systems—into STEM instruction.
+              </p>
+            </div>
+          </div>
+
+          <!-- Research Interests Keywords -->
+          <div class="mt-6 pt-4 border-t">
+            <h3 class="text-xs font-semibold uppercase text-gray-500 mb-2">Research Focus Areas:</h3>
+            <div class="flex flex-wrap gap-2 text-xs">
+              <span class="px-2.5 py-1 bg-blue-100 text-uf-blue rounded-full font-medium">Artificial Intelligence in Education</span>
+              <span class="px-2.5 py-1 bg-blue-100 text-uf-blue rounded-full font-medium">Multimodal Learning Analytics</span>
+              <span class="px-2.5 py-1 bg-blue-100 text-uf-blue rounded-full font-medium">Affective Computing & Stress Metrics</span>
+              <span class="px-2.5 py-1 bg-blue-100 text-uf-blue rounded-full font-medium">Culturally Responsive Pedagogy</span>
+              <span class="px-2.5 py-1 bg-blue-100 text-uf-blue rounded-full font-medium">Intelligent Tutoring Systems</span>
+            </div>
+          </div>
+
+          <!-- Social / Contact Icons Bar -->
+          <div class="mt-6 pt-4 border-t flex items-center gap-4 text-gray-600">
+            <span class="text-xs font-semibold uppercase text-gray-400">Connect:</span>
+            <a href="mailto:emartezorrilla@ufl.edu" class="hover:text-uf-blue transition-colors text-lg" title="Email"><i class="fa fa-envelope"></i></a>
+            <a href="https://scholar.google.com" target="_blank" class="hover:text-uf-blue transition-colors text-lg" title="Google Scholar"><i class="fa fa-google"></i></a>
+            <a href="https://linkedin.com" target="_blank" class="hover:text-uf-blue transition-colors text-lg" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Education & Credentials Section -->
+    <section class="bg-white rounded-xl shadow-md p-6 mb-8 border border-gray-100">
+      <h2 class="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+        <i class="fa fa-graduation-cap text-uf-orange"></i> Education & Background
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+        <div class="p-4 border rounded-lg bg-gray-50">
+          <p class="font-bold text-uf-blue">Ph.D. in Engineering Education</p>
+          <p class="text-gray-600">University of Florida (2023)</p>
+        </div>
+        <div class="p-4 border rounded-lg bg-gray-50">
+          <p class="font-bold text-uf-blue">M.S. in Electrical and Computer Engineering</p>
+          <p class="text-gray-600">University of Florida (2022)</p>
+        </div>
+        <div class="p-4 border rounded-lg bg-gray-50">
+          <p class="font-bold text-uf-blue">M.S. in Educational Technology</p>
+          <p class="text-gray-600">Universidad Tecnológica de Santiago (UTESA, 2016)</p>
+        </div>
+        <div class="p-4 border rounded-lg bg-gray-50">
+          <p class="font-bold text-uf-blue">B.S. in Electronics Engineering</p>
+          <p class="text-gray-600">Pontificia Universidad Católica Madre y Maestra (PUCMM, 1998)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- News Container Section -->
+    <section id="news" class="bg-white rounded-xl shadow-md p-6 border border-gray-100 mb-8">
+      <h2 class="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+        <i class="fa fa-newspaper-o text-uf-blue"></i> Recent Announcements & Activity
+      </h2>
+      
+      <div class="max-h-[350px] overflow-y-auto pr-2 divide-y divide-gray-100 text-sm">
+        <div class="py-3 flex gap-3">
+          <span class="text-xs font-semibold px-2 py-1 bg-blue-100 text-uf-blue rounded self-start shrink-0">06/2026</span>
+          <p class="text-gray-700">Delivered a keynote presentation and finalized an international memorandum of understanding (MOU) at Universidad Politécnica de Pachuca in Mexico as part of the UF Global Fellows initiative.</p>
+        </div>
+        <div class="py-3 flex gap-3">
+          <span class="text-xs font-semibold px-2 py-1 bg-blue-100 text-uf-blue rounded self-start shrink-0">06/2026</span>
+          <p class="text-gray-700">Appointed as Graduate Coordinator for the Department of Engineering Education at the University of Florida.</p>
+        </div>
+        <div class="py-3 flex gap-3">
+          <span class="text-xs font-semibold px-2 py-1 bg-blue-100 text-uf-blue rounded self-start shrink-0">01/2026</span>
+          <p class="text-gray-700">Published research in <em>European Journal of Engineering Education</em> on real-time physiological stress indicators and academic performance during high-stakes exams.</p>
+        </div>
+        <div class="py-3 flex gap-3">
+          <span class="text-xs font-semibold px-2 py-1 bg-blue-100 text-uf-blue rounded self-start shrink-0">2024</span>
+          <p class="text-gray-700">Honored with the IEEE ASEE Frontiers in Education (FIE) New Faculty Fellows Award.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-white rounded-xl shadow-md p-6 border border-gray-100">
+      <h2 class="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+        <i class="fa fa-envelope text-uf-blue"></i> Contact Information
+      </h2>
+      <div class="text-sm space-y-2 text-gray-700">
+        <p><strong>Office:</strong> Department of Engineering Education, Herbert Wertheim College of Engineering</p>
+        <p><strong>Institution:</strong> University of Florida, Gainesville, FL 32611</p>
+        <p><strong>Email:</strong> <a href="mailto:emartezorrilla@ufl.edu" class="text-uf-blue hover:underline">emartezorrilla@ufl.edu</a></p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white mt-12 py-8 border-t shadow-inner text-sm text-gray-600">
+    <div class="container mx-auto px-4 text-center">
+      <p class="text-xs text-gray-500 mb-2">Copyright &copy; 2026 Dr. Edwin Marte Zorrilla. All Rights Reserved.</p>
+      <p class="text-xs text-gray-400">
+        <a href="https://accessibility.ufl.edu" target="_blank" class="hover:underline flex items-center justify-center gap-1">
+          <i class="fa fa-universal-access"></i> UF Accessibility Commitment
+        </a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
