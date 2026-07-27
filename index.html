@@ -9,16 +9,12 @@
 
   <link rel="shortcut icon" href="favicon.ico">
 
-  <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css">
 
-  <!-- UF Brand & Custom Styles Fallback -->
   <style>
     :root {
       --uf-blue: #0021A5;
@@ -69,7 +65,6 @@
     }
   </style>
 
-  <!-- External JavaScript Files -->
   <script type="text/javascript" src="assets/js/jquery-3.5.0.min.js"></script>
   <script type="text/javascript" src="assets/js/main.js"></script>
 
@@ -85,16 +80,13 @@
 
 <body class="bg-gray-50 text-gray-800 min-h-screen flex flex-col font-sans">
 
-  <!-- Skip to Main Content (Accessibility) -->
   <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:px-4 focus:py-2 focus:bg-uf-orange focus:text-white focus:rounded-md">
     Skip to main content
   </a>
 
-  <!-- Header -->
   <header class="header-gradient text-white shadow-2xl sticky top-0 z-40">
     <div class="container mx-auto px-4 py-4">
       <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
-        <!-- Profile Identity -->
         <div class="flex items-center gap-4">
           <div class="header-icon rounded-xl p-2 flex items-center justify-center shrink-0">
             <img src="assets/img/personal/edwin-marte.jpg" alt="Portrait of Dr. Edwin Marte Zorrilla" class="w-12 h-12 rounded-lg object-cover">
@@ -110,7 +102,6 @@
           </div>
         </div>
 
-        <!-- External Quick Links -->
         <div class="flex items-center gap-3">
           <a href="assets/docs/CV_Marte_Zorrilla.pdf" target="_blank" class="px-4 py-2 bg-uf-orange hover:bg-orange-600 text-white text-sm font-medium rounded-md shadow transition-colors flex items-center gap-2">
             <i class="fa fa-download" aria-hidden="true"></i> Download CV
@@ -118,11 +109,9 @@
         </div>
       </div>
     </div>
-    <!-- Accent Line -->
     <div class="h-1 bg-gradient-to-r from-uf-orange via-yellow-400 to-uf-orange"></div>
   </header>
 
-  <!-- Navigation Bar -->
   <nav class="bg-white border-b shadow-sm sticky top-[81px] z-30" aria-label="Main Navigation">
     <div class="container mx-auto px-4 overflow-x-auto">
       <ul class="flex items-center gap-1 md:gap-2 text-sm font-medium py-2 whitespace-nowrap">
@@ -136,20 +125,16 @@
     </div>
   </nav>
 
-  <!-- Main Content Container -->
   <main id="main" class="container mx-auto px-4 py-8 flex-1 max-w-7xl">
 
-    <!-- About Me Section -->
     <section id="biography" class="bg-white rounded-xl shadow-md p-6 mb-8 border border-gray-100">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
         
-        <!-- Sidebar/Thumbnails Area -->
         <div class="lg:col-span-4 flex flex-col gap-6">
           <div class="overflow-hidden rounded-xl shadow-md border border-gray-200">
             <img src="assets/img/personal/edwin-marte-hero.jpg" alt="Hero portrait of Dr. Edwin Marte Zorrilla" class="w-full object-cover">
           </div>
 
-          <!-- Academic Affiliation Card -->
           <div class="p-4 bg-blue-50/50 rounded-xl border border-blue-100 text-center">
             <img src="assets/img/brand/ufl-logo.png" alt="University of Florida Logo" class="mx-auto max-h-12 object-contain mb-2">
             <p class="text-xs text-gray-700 font-semibold">Department of Engineering Education</p>
@@ -157,7 +142,6 @@
             <p class="text-xs text-gray-500 mt-1">University of Florida &bull; Gainesville, FL</p>
           </div>
 
-          <!-- Quick Honors Callout -->
           <div class="bg-gradient-to-br from-amber-50 to-orange-50 p-5 rounded-xl border border-orange-200">
             <h3 class="text-base font-bold text-uf-orange mb-2 flex items-center gap-2">
               <i class="fa fa-trophy"></i> Recognition & Roles
@@ -170,7 +154,6 @@
           </div>
         </div>
 
-        <!-- Bio Narrative -->
         <div class="lg:col-span-8 flex flex-col justify-between">
           <div>
             <h2 class="text-2xl font-bold text-uf-blue mb-4 border-b pb-2 flex items-center justify-between">
@@ -190,7 +173,6 @@
             </div>
           </div>
 
-          <!-- Research Interests Keywords -->
           <div class="mt-6 pt-4 border-t">
             <h3 class="text-xs font-semibold uppercase text-gray-500 mb-2">Research Focus Areas:</h3>
             <div class="flex flex-wrap gap-2 text-xs">
@@ -202,19 +184,40 @@
             </div>
           </div>
 
-          <!-- Social / Contact Icons Bar -->
-          <div class="mt-6 pt-4 border-t flex items-center gap-4 text-gray-600">
-            <span class="text-xs font-semibold uppercase text-gray-400">Connect:</span>
-            <a href="mailto:emartezorrilla@ufl.edu" class="hover:text-uf-blue transition-colors text-lg" title="Email"><i class="fa fa-envelope"></i></a>
-            <a href="https://scholar.google.com" target="_blank" class="hover:text-uf-blue transition-colors text-lg" title="Google Scholar"><i class="fa fa-google"></i></a>
-            <a href="https://linkedin.com" target="_blank" class="hover:text-uf-blue transition-colors text-lg" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+          <div class="mt-6 pt-4 border-t">
+            <span class="text-xs font-semibold uppercase text-gray-400 block mb-3">Connect & Profiles:</span>
+            <div class="flex flex-wrap items-center gap-2 text-xs">
+              <a href="mailto:emartezorrilla@ufl.edu" class="px-3 py-1.5 bg-gray-100 hover:bg-uf-blue hover:text-white rounded-md transition-colors text-gray-700 flex items-center gap-1.5 font-medium">
+                <i class="fa fa-envelope text-uf-blue"></i> Email
+              </a>
+              <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank" class="px-3 py-1.5 bg-gray-100 hover:bg-uf-blue hover:text-white rounded-md transition-colors text-gray-700 flex items-center gap-1.5 font-medium">
+                <i class="fa fa-graduation-cap text-uf-blue"></i> Edwin Marte - Google Scholar
+              </a>
+              <a href="https://eed.eng.ufl.edu/people/faculty/name/edwin-marte/" target="_blank" class="px-3 py-1.5 bg-gray-100 hover:bg-uf-blue hover:text-white rounded-md transition-colors text-gray-700 flex items-center gap-1.5 font-medium">
+                <i class="fa fa-university text-uf-blue"></i> Faculty - Department of Engineering Education
+              </a>
+              <a href="https://eed.eng.ufl.edu/people/faculty/name/edwin-marte/#publications" target="_blank" class="px-3 py-1.5 bg-gray-100 hover:bg-uf-blue hover:text-white rounded-md transition-colors text-gray-700 flex items-center gap-1.5 font-medium">
+                <i class="fa fa-book text-uf-blue"></i> Edwin Marte Zorrilla | Publications | University of Florida
+              </a>
+              <a href="https://orcid.org/0000-0002-8700-3882" target="_blank" class="px-3 py-1.5 bg-gray-100 hover:bg-uf-blue hover:text-white rounded-md transition-colors text-gray-700 flex items-center gap-1.5 font-medium">
+                <i class="fa fa-id-badge text-uf-blue"></i> edwin marte (0000-0002-8700-3882) - ORCID
+              </a>
+              <a href="https://www.linkedin.com/in/edwinmarte/" target="_blank" class="px-3 py-1.5 bg-gray-100 hover:bg-uf-blue hover:text-white rounded-md transition-colors text-gray-700 flex items-center gap-1.5 font-medium">
+                <i class="fa fa-linkedin text-uf-blue"></i> Edwin Marte, Ph.D. | LinkedIn
+              </a>
+              <a href="https://peer.asee.org/" target="_blank" class="px-3 py-1.5 bg-gray-100 hover:bg-uf-blue hover:text-white rounded-md transition-colors text-gray-700 flex items-center gap-1.5 font-medium">
+                <i class="fa fa-file-text-o text-uf-blue"></i> ASEE PEER - Edwin Marte Zorrilla
+              </a>
+              <a href="https://ieeexplore.ieee.org/" target="_blank" class="px-3 py-1.5 bg-gray-100 hover:bg-uf-blue hover:text-white rounded-md transition-colors text-gray-700 flex items-center gap-1.5 font-medium">
+                <i class="fa fa-newspaper-o text-uf-blue"></i> Edwin Marte Zorrilla - IEEE Xplore Author Profile
+              </a>
+            </div>
           </div>
         </div>
 
       </div>
     </section>
 
-    <!-- Education & Credentials Section -->
     <section class="bg-white rounded-xl shadow-md p-6 mb-8 border border-gray-100">
       <h2 class="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
         <i class="fa fa-graduation-cap text-uf-orange"></i> Education & Background
@@ -239,7 +242,6 @@
       </div>
     </section>
 
-    <!-- News Container Section -->
     <section id="news" class="bg-white rounded-xl shadow-md p-6 border border-gray-100 mb-8">
       <h2 class="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
         <i class="fa fa-newspaper-o text-uf-blue"></i> Recent Announcements & Activity
@@ -265,7 +267,6 @@
       </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="bg-white rounded-xl shadow-md p-6 border border-gray-100">
       <h2 class="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
         <i class="fa fa-envelope text-uf-blue"></i> Contact Information
@@ -279,7 +280,6 @@
 
   </main>
 
-  <!-- Footer -->
   <footer class="bg-white mt-12 py-8 border-t shadow-inner text-sm text-gray-600">
     <div class="container mx-auto px-4 text-center">
       <p class="text-xs text-gray-500 mb-2">Copyright &copy; 2026 Dr. Edwin Marte Zorrilla. All Rights Reserved.</p>
